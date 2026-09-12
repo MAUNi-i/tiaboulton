@@ -66,7 +66,8 @@ export function WorkPage() {
             site is her private practice — for clients who want the hour, or the live-in hold, not the curriculum.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <SessionCheckoutButton />
+            <SessionCheckoutButton kind="harley" />
+            <SessionCheckoutButton kind="online" variant="ghost" />
             <Button variant="ghost" asChild>
               <Link to="/residential">Residential · P.O.A</Link>
             </Button>

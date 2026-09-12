@@ -23,10 +23,8 @@ function Home() {
             and would like somewhere that does not require them to perform it.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <SessionCheckoutButton />
-            <Button variant="ghost" asChild>
-              <Link to="/rooms">Harley Street rooms</Link>
-            </Button>
+            <SessionCheckoutButton kind="harley" />
+            <SessionCheckoutButton kind="online" variant="ghost" />
           </div>
         </div>
         <figure className="relative min-h-[420px] bg-cream">
@@ -54,9 +52,9 @@ function Home() {
       <section className="grid grid-cols-2 border-y border-line md:grid-cols-4">
         {[
           ["2010", "In practice as a coach"],
-          ["£75", "Private hour, Stripe"],
+          ["£145", "Harley Street, in person"],
+          ["£75", "Online hour, Stripe"],
           ["24h", "Residential support, P.O.A"],
-          ["W1G", "AGP, 15 Harley Street"],
         ].map(([k, v]) => (
           <div
             key={k}

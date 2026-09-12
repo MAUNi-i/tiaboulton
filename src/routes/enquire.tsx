@@ -8,8 +8,13 @@ export const Route = createFileRoute("/enquire")({ component: EnquirePage });
 
 function EnquirePage() {
   const [note, setNote] = useState("");
-  const [kind, setKind] = useState<"hour" | "residential">("hour");
-  const subject = kind === "residential" ? "Residential support — P.O.A" : "Private practice enquiry";
+  const [kind, setKind] = useState<"harley" | "online" | "residential">("harley");
+  const subject =
+    kind === "residential"
+      ? "Residential support — P.O.A"
+      : kind === "harley"
+        ? "Harley Street session — £145"
+        : "Online session — £75";
   const mail = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(note)}`;
 
   return (
@@ -18,7 +23,7 @@ function EnquirePage() {
         <p className="font-sans text-xs uppercase tracking-widest text-metal">Enquire</p>
         <h1 className="mt-3 font-serif text-title">Write, or book the hour.</h1>
         <p className="mt-4 text-muted">
-          The consulting-room hour is £75 on Stripe. Residential support — twenty-four hours, as part of a
+          In person at Harley Street is £145. Online is £75. Residential support — twenty-four hours, as part of a
           multidisciplinary team — is price on application. Tia replies herself.
         </p>
         <p className="mt-8 font-serif text-2xl leading-snug">
@@ -42,8 +47,11 @@ function EnquirePage() {
       >
         <p className="font-sans text-xs uppercase tracking-widest text-metal">About</p>
         <div className="flex flex-wrap gap-2">
-          <Button type="button" variant={kind === "hour" ? "solid" : "ghost"} onClick={() => setKind("hour")}>
-            The hour · £75
+          <Button type="button" variant={kind === "harley" ? "solid" : "ghost"} onClick={() => setKind("harley")}>
+            Harley Street · £145
+          </Button>
+          <Button type="button" variant={kind === "online" ? "solid" : "ghost"} onClick={() => setKind("online")}>
+            Online · £75
           </Button>
           <Button
             type="button"
@@ -70,7 +78,8 @@ function EnquirePage() {
         />
         <div className="flex flex-wrap gap-3">
           <Button type="submit">Send a note</Button>
-          {kind === "hour" ? <SessionCheckoutButton /> : null}
+          {kind === "harley" ? <SessionCheckoutButton kind="harley" /> : null}
+          {kind === "online" ? <SessionCheckoutButton kind="online" /> : null}
         </div>
       </form>
     </main>

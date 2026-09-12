@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { SESSION_CHECKOUT_URL } from "@/lib/catalog";
+import { HARLEY_CHECKOUT_URL } from "@/lib/catalog";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -45,12 +45,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             ))}
           </nav>
           <a
-            href={SESSION_CHECKOUT_URL}
+            href={HARLEY_CHECKOUT_URL}
             target="_blank"
             rel="noreferrer"
             className="ml-auto hidden h-10 items-center border border-ink px-3 font-sans text-[0.68rem] uppercase tracking-[0.16em] hover:bg-ink hover:text-paper md:ml-4 md:inline-flex"
           >
-            Book £75
+            Book £145
           </a>
           <button
             type="button"
@@ -74,12 +74,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
             <a
-              href={SESSION_CHECKOUT_URL}
+              href={HARLEY_CHECKOUT_URL}
               target="_blank"
               rel="noreferrer"
               className="flex h-11 items-center font-sans text-sm"
             >
-              Book a session — £75
+              Harley Street — £145
             </a>
           </nav>
         ) : null}

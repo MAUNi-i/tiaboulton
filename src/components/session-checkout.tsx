@@ -1,14 +1,31 @@
 import { Button } from "@/components/ui/button";
-import { EMAIL, SESSION_CHECKOUT_URL, SESSION_PRICE_GBP } from "@/lib/catalog";
+import {
+  EMAIL,
+  HARLEY_CHECKOUT_URL,
+  HARLEY_PRICE_GBP,
+  ONLINE_CHECKOUT_URL,
+  ONLINE_PRICE_GBP,
+} from "@/lib/catalog";
 
-export function SessionCheckoutButton({ className }: { className?: string }) {
-  const label = `Book a session — £${SESSION_PRICE_GBP}`;
-  const href = SESSION_CHECKOUT_URL
-    ? SESSION_CHECKOUT_URL
-    : `mailto:${EMAIL}?subject=${encodeURIComponent("Private session — £75")}`;
+type Kind = "online" | "harley";
+
+export function SessionCheckoutButton({
+  kind = "harley",
+  className,
+  variant = "solid",
+}: {
+  kind?: Kind;
+  className?: string;
+  variant?: "solid" | "ghost" | "metal";
+}) {
+  const harley = kind === "harley";
+  const href = harley ? HARLEY_CHECKOUT_URL : ONLINE_CHECKOUT_URL;
+  const price = harley ? HARLEY_PRICE_GBP : ONLINE_PRICE_GBP;
+  const label = harley ? `Harley Street — £${price}` : `Online — £${price}`;
+  const fallback = `mailto:${EMAIL}?subject=${encodeURIComponent(label)}`;
   return (
-    <Button asChild className={className}>
-      <a href={href} target={SESSION_CHECKOUT_URL ? "_blank" : undefined} rel="noreferrer">
+    <Button asChild variant={variant} className={className}>
+      <a href={href || fallback} target={href ? "_blank" : undefined} rel="noreferrer">
         {label}
       </a>
     </Button>

@@ -32,7 +32,7 @@ function ResidentialPage() {
           a multidisciplinary team, until the situation can be held again.
         </p>
         <p className="mt-6 font-serif text-4xl">P.O.A</p>
-        <p className="mt-2 text-sm text-muted">Price on application · By arrangement · Not the £75 hour</p>
+        <p className="mt-2 text-sm text-muted">Price on application · By arrangement · Not the consulting-room hour</p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild>
             <a href={mail}>Enquire about residential</a>
