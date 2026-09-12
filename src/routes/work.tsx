@@ -65,11 +65,17 @@ export function WorkPage() {
             training in the UK, South Africa, Australia, New Zealand and Hong Kong. That work has its own house. This
             site is her private practice — for clients who want the hour, or the live-in hold, not the curriculum.
           </p>
+          <p className="mt-4 text-muted">
+            Counselling on this practice is insured as fully qualified work under the BACP scheme.
+          </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <SessionCheckoutButton kind="harley" />
             <SessionCheckoutButton kind="online" variant="ghost" />
             <Button variant="ghost" asChild>
               <Link to="/residential">Residential · P.O.A</Link>
+            </Button>
+            <Button variant="ghost" asChild>
+              <Link to="/insurance">Cover</Link>
             </Button>
           </div>
         </div>

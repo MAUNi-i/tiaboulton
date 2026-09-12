@@ -73,6 +73,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 {l.label}
               </Link>
             ))}
+            <Link to="/insurance" className="flex h-11 items-center font-sans text-sm" onClick={() => setOpen(false)}>
+              Cover
+            </Link>
             <a
               href={HARLEY_CHECKOUT_URL}
               target="_blank"
@@ -95,7 +98,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               and online.
             </p>
           </div>
-          <p className="text-xs text-faint">Not a crisis service · Samaritans 116 123</p>
+          <div className="text-xs text-faint">
+            <p>
+              <Link to="/insurance" className="hover:text-ink">
+                Cover · BACP scheme, Zurich &amp; ARAG
+              </Link>
+            </p>
+            <p className="mt-2">Not a crisis service · Samaritans 116 123</p>
+          </div>
         </div>
       </footer>
     </div>
