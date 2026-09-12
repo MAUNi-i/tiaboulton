@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EnquireRouteImport } from './routes/enquire'
+import { Route as InsuranceRouteImport } from './routes/insurance'
+import { Route as ResidentialRouteImport } from './routes/residential'
 import { Route as RoomsRouteImport } from './routes/rooms'
 import { Route as SessionsRouteImport } from './routes/sessions'
 import { Route as WorkRouteImport } from './routes/work'
@@ -23,6 +25,16 @@ const IndexRoute = IndexRouteImport.update({
 const EnquireRoute = EnquireRouteImport.update({
   id: '/enquire',
   path: '/enquire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsuranceRoute = InsuranceRouteImport.update({
+  id: '/insurance',
+  path: '/insurance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResidentialRoute = ResidentialRouteImport.update({
+  id: '/residential',
+  path: '/residential',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RoomsRoute = RoomsRouteImport.update({
@@ -44,6 +56,8 @@ const WorkRoute = WorkRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/enquire': typeof EnquireRoute
+  '/insurance': typeof InsuranceRoute
+  '/residential': typeof ResidentialRoute
   '/rooms': typeof RoomsRoute
   '/sessions': typeof SessionsRoute
   '/work': typeof WorkRoute
@@ -51,6 +65,8 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/enquire': typeof EnquireRoute
+  '/insurance': typeof InsuranceRoute
+  '/residential': typeof ResidentialRoute
   '/rooms': typeof RoomsRoute
   '/sessions': typeof SessionsRoute
   '/work': typeof WorkRoute
@@ -59,21 +75,25 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/enquire': typeof EnquireRoute
+  '/insurance': typeof InsuranceRoute
+  '/residential': typeof ResidentialRoute
   '/rooms': typeof RoomsRoute
   '/sessions': typeof SessionsRoute
   '/work': typeof WorkRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/enquire' | '/rooms' | '/sessions' | '/work'
+  fullPaths: '/' | '/enquire' | '/insurance' | '/residential' | '/rooms' | '/sessions' | '/work'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/enquire' | '/rooms' | '/sessions' | '/work'
-  id: '__root__' | '/' | '/enquire' | '/rooms' | '/sessions' | '/work'
+  to: '/' | '/enquire' | '/insurance' | '/residential' | '/rooms' | '/sessions' | '/work'
+  id: '__root__' | '/' | '/enquire' | '/insurance' | '/residential' | '/rooms' | '/sessions' | '/work'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EnquireRoute: typeof EnquireRoute
+  InsuranceRoute: typeof InsuranceRoute
+  ResidentialRoute: typeof ResidentialRoute
   RoomsRoute: typeof RoomsRoute
   SessionsRoute: typeof SessionsRoute
   WorkRoute: typeof WorkRoute
@@ -93,6 +113,20 @@ declare module '@tanstack/react-router' {
       path: '/enquire'
       fullPath: '/enquire'
       preLoaderRoute: typeof EnquireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insurance': {
+      id: '/insurance'
+      path: '/insurance'
+      fullPath: '/insurance'
+      preLoaderRoute: typeof InsuranceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/residential': {
+      id: '/residential'
+      path: '/residential'
+      fullPath: '/residential'
+      preLoaderRoute: typeof ResidentialRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/rooms': {
@@ -122,6 +156,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EnquireRoute: EnquireRoute,
+  InsuranceRoute: InsuranceRoute,
+  ResidentialRoute: ResidentialRoute,
   RoomsRoute: RoomsRoute,
   SessionsRoute: SessionsRoute,
   WorkRoute: WorkRoute,
