@@ -18,7 +18,7 @@ function RoomsPage() {
         </figure>
         <div className="flex flex-col justify-center px-6 py-16 md:px-12">
           <p className="font-sans text-xs uppercase tracking-widest text-metal">Rooms</p>
-          <h1 className="mt-3 font-serif text-title">The rooms at 15 Harley Street.</h1>
+          <h1 className="mt-3 font-serif text-title">The rooms at 15 Harley Street, W1G 9QQ.</h1>
           <p className="mt-4 max-w-md text-muted">
             The Anthony Group Practice — a curated suite of consulting rooms. Warm, discreet, appointed for the hour
             rather than a waiting-room theatre. Online, the same clinician, wherever you are.

@@ -15,7 +15,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Tia Boulton — registered counsellor, coach and supervisor. Private sessions at The Anthony Group Practice, 15 Harley Street. Residential support, 24 hours, P.O.A, as part of a multidisciplinary team.",
+          "Tia Boulton — registered counsellor, coach and supervisor. Private sessions at The Anthony Group Practice, 15 Harley Street, London W1G 9QQ. Residential support, 24 hours, P.O.A, as part of a multidisciplinary team.",
       },
       { name: "theme-color", content: "#f3efe8" },
     ],

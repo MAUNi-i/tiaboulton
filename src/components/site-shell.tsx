@@ -20,7 +20,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-dvh bg-paper text-ink">
       <p className="bg-cream px-4 py-2 text-center font-sans text-xs uppercase tracking-widest text-ink">
-        Registered counsellor · Coach · Supervisor · Residential support, P.O.A · 15 Harley Street
+        Registered counsellor · Coach · Supervisor · Residential support, P.O.A · 15 Harley Street, W1G 9QQ
       </p>
       <header className="sticky top-0 z-30 border-b border-line bg-paper/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 md:px-8">

@@ -11,7 +11,7 @@ function Home() {
       <section className="grid md:grid-cols-2">
         <div className="flex flex-col justify-center px-6 py-16 md:px-12 md:py-24">
           <p className="mb-4 font-sans text-xs uppercase tracking-widest text-metal">
-            The Anthony Group Practice · Harley Street · Online
+            The Anthony Group Practice · 15 Harley Street, W1G 9QQ · Online
           </p>
           <h1 className="font-serif text-display">
             Tia
@@ -52,7 +52,7 @@ function Home() {
       <section className="grid grid-cols-2 border-y border-line md:grid-cols-4">
         {[
           ["2010", "In practice as a coach"],
-          ["£145", "Harley Street, in person"],
+          ["£145", "Harley Street, W1G 9QQ"],
           ["£75", "Online hour, Stripe"],
           ["24h", "Residential support, P.O.A"],
         ].map(([k, v]) => (

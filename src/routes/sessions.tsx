@@ -17,10 +17,10 @@ function SessionsPage() {
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         <article className="border border-line bg-card p-8">
           <p className="font-sans text-xs uppercase tracking-widest text-metal">In person</p>
-          <h2 className="mt-2 font-serif text-3xl">15 Harley Street</h2>
+          <h2 className="mt-2 font-serif text-3xl">15 Harley Street, W1G 9QQ</h2>
           <p className="mt-6 font-serif text-5xl tabular-nums">£{HARLEY_PRICE_GBP}</p>
           <p className="mt-2 text-sm text-muted">
-            The Anthony Group Practice, W1G 9QQ. Press 6. Fifty to sixty minutes in the room.
+            The Anthony Group Practice. Press 6. Fifty to sixty minutes in the room.
           </p>
           <div className="mt-8">
             <SessionCheckoutButton kind="harley" />

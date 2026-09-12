@@ -1,6 +1,6 @@
 export const EMAIL = "hello@tiaboulton.com";
 export const ROOMS = "The Anthony Group Practice, 15 Harley Street, London W1G 9QQ";
-export const ROOMS_SHORT = "AGP, 15 Harley Street";
+export const ROOMS_SHORT = "15 Harley Street, London W1G 9QQ";
 export const ROOMS_FLOOR = "3rd & 4th floor maisonette";
 export const ROOMS_ARRIVAL = "Press 6 on arrival";
 export const ROOMS_MAP = "https://www.google.com/maps/search/?api=1&query=15+Harley+Street+London+W1G+9QQ";
@@ -72,7 +72,7 @@ export const chapters = [
   {
     num: "03",
     title: "Harley Street and home",
-    body: "Face to face at The Anthony Group Practice, 15 Harley Street, £145. Online, worldwide, £75. For complex cases: residential support, twenty-four hours, as part of a multidisciplinary team. Price on application.",
+    body: "Face to face at The Anthony Group Practice, 15 Harley Street, London W1G 9QQ, £145. Online, worldwide, £75. For complex cases: residential support, twenty-four hours, as part of a multidisciplinary team. Price on application.",
   },
   {
     num: "04",
