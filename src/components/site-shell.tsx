@@ -9,6 +9,7 @@ const links = [
   { to: "/shop", label: "Lookbook" },
   { to: "/stack", label: "Stack" },
   { to: "/custom", label: "Custom" },
+  { to: "/coaching", label: "Coaching" },
   { to: "/studio", label: "Studio" },
 ] as const;
 
@@ -19,7 +20,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-dvh bg-paper text-ink">
       <p className="bg-cream px-4 py-2 text-center font-sans text-[0.68rem] uppercase tracking-[0.18em] text-ink">
-        Handmade in Cape Town · Shop at orajewellery.com · 24-month warranty
+        Handmade in Cape Town · Founder coaching £75 · Shop at orajewellery.com
       </p>
       <header className="sticky top-0 z-30 border-b border-line bg-paper/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 md:px-8">

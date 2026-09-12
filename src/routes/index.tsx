@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { CoachingCheckoutButton } from "@/components/coaching-checkout";
 import { Button } from "@/components/ui/button";
 import { chapters, INSTAGRAM_FOUNDER, SHOP } from "@/lib/catalog";
 
@@ -25,6 +26,7 @@ function Home() {
             <Button asChild>
               <Link to="/stack">Build a charm stack</Link>
             </Button>
+            <CoachingCheckoutButton />
             <Button variant="ghost" asChild>
               <a href={SHOP} target="_blank" rel="noreferrer">
                 Open the shop

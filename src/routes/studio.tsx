@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { CoachingCheckoutButton } from "@/components/coaching-checkout";
 import { Button } from "@/components/ui/button";
 import { EMAIL, INSTAGRAM_FOUNDER, INSTAGRAM_SHOP, PHONE, STUDIO } from "@/lib/catalog";
 
@@ -56,6 +57,9 @@ function StudioPage() {
         <Button asChild className="mt-4">
           <a href={mail}>Open email</a>
         </Button>
+        <div className="mt-4">
+          <CoachingCheckoutButton />
+        </div>
       </div>
     </main>
   );

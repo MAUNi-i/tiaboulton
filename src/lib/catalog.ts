@@ -21,6 +21,9 @@ export const INSTAGRAM_SHOP = "https://www.instagram.com/orajewellerysa/";
 export const EMAIL = "hello@orajewellery.com";
 export const PHONE = "+27 76 547 2991";
 export const STUDIO = "604, 125 Buitengracht Street, Cape Town CBD";
+/** Live Stripe Payment Link — Founder Coaching Session £75 */
+export const COACHING_CHECKOUT_URL = "https://book.stripe.com/7sY5kCdHdfK3aWJ1qZ53O08";
+export const COACHING_PRICE_GBP = 75;
 
 export const collections: Collection[] = [
   {
