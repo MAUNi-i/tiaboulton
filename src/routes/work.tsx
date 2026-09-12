@@ -38,9 +38,9 @@ export function WorkPage() {
       <section className="mt-16 grid gap-10 md:grid-cols-2">
         <figure>
           <img
-            src="/media/window.jpg"
-            alt="Quiet drawing room with silk curtain and an empty chair"
-            className="w-full object-cover"
+            src="/media/tia.jpg"
+            alt="Tia Boulton"
+            className="w-full object-cover object-top"
           />
         </figure>
         <div className="self-center">

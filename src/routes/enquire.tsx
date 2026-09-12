@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SessionCheckoutButton } from "@/components/session-checkout";
 import { Button } from "@/components/ui/button";
-import { EMAIL, ROOMS } from "@/lib/catalog";
+import { EMAIL, ROOMS, ROOMS_ARRIVAL } from "@/lib/catalog";
 
 export const Route = createFileRoute("/enquire")({ component: EnquirePage });
 
@@ -21,6 +21,8 @@ function EnquirePage() {
         </p>
         <p className="mt-8 font-serif text-2xl leading-snug">
           {ROOMS}
+          <br />
+          {ROOMS_ARRIVAL}
           <br />
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
         </p>

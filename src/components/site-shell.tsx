@@ -19,7 +19,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-dvh bg-paper text-ink">
       <p className="bg-cream px-4 py-2 text-center font-sans text-xs uppercase tracking-widest text-ink">
-        Registered counsellor · Coach · Supervisor · AGP, 15 Harley Street
+        Registered counsellor · Coach · Supervisor · The Anthony Group Practice, 15 Harley Street
       </p>
       <header className="sticky top-0 z-30 border-b border-line bg-paper/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 md:px-8">
@@ -89,8 +89,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div>
             <p className="font-serif text-2xl">Tia Boulton</p>
             <p className="mt-2 max-w-sm text-sm text-muted">
-              Private practice. Counselling, coaching, and supervision. Face to face at AGP, 15 Harley Street,
-              London, and online.
+              Private practice. Counselling, coaching, and supervision. Face to face at The Anthony Group Practice,
+              15 Harley Street, London W1G 9QQ, and online.
             </p>
           </div>
           <p className="text-xs text-faint">Not a crisis service · Samaritans 116 123</p>

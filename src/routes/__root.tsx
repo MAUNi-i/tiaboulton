@@ -15,7 +15,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Tia Boulton — registered counsellor, coach and supervisor. Private sessions in person at AGP, 15 Harley Street, London, and online.",
+          "Tia Boulton — registered counsellor, coach and supervisor. Private sessions at The Anthony Group Practice, 15 Harley Street, London, and online.",
       },
       { name: "theme-color", content: "#f3efe8" },
     ],

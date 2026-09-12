@@ -11,7 +11,7 @@ function Home() {
       <section className="grid md:grid-cols-2">
         <div className="flex flex-col justify-center px-6 py-16 md:px-12 md:py-24">
           <p className="mb-4 font-sans text-xs uppercase tracking-widest text-metal">
-            Harley Street · Online · Private practice
+            The Anthony Group Practice · Harley Street · Online
           </p>
           <h1 className="font-serif text-display">
             Tia
@@ -29,14 +29,14 @@ function Home() {
             </Button>
           </div>
         </div>
-        <figure className="relative min-h-[420px]">
+        <figure className="relative min-h-[420px] bg-cream">
           <img
-            src="/media/room.jpg"
-            alt="Consulting room with olive leather chair and north light"
-            className="h-full w-full object-cover"
+            src="/media/tia.jpg"
+            alt="Tia Boulton, registered counsellor and coach"
+            className="h-full w-full object-cover object-top"
           />
-          <figcaption className="absolute bottom-4 left-4 font-sans text-xs uppercase tracking-widest text-paper">
-            AGP · 15 Harley Street
+          <figcaption className="absolute bottom-4 left-4 bg-paper/85 px-3 py-1 font-sans text-xs uppercase tracking-widest text-ink">
+            Tia Boulton
           </figcaption>
         </figure>
       </section>
@@ -85,8 +85,8 @@ function Home() {
       <section className="grid md:grid-cols-2">
         <figure className="min-h-[360px]">
           <img
-            src="/media/desk.jpg"
-            alt="Walnut desk with linen notebook and a white rose"
+            src="/media/room.jpg"
+            alt="Consulting room with olive leather chair and north light"
             className="h-full w-full object-cover"
           />
         </figure>
