@@ -85,8 +85,8 @@ function Home() {
       <section className="grid md:grid-cols-2">
         <figure className="min-h-[360px]">
           <img
-            src="/media/room.jpg"
-            alt="Consulting room with olive leather chair and north light"
+            src="/media/agp-room2.jpg"
+            alt="Room 2 at The Anthony Group Practice — fireplace and sofa"
             className="h-full w-full object-cover"
           />
         </figure>

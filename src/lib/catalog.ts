@@ -9,6 +9,51 @@ export const SESSION_PRICE_GBP = 75;
 /** Live Stripe Payment Link — Tia Boulton Private Session £75 */
 export const SESSION_CHECKOUT_URL = "https://book.stripe.com/00w5kC1YvdBV9SFfhP53O09";
 
+export const roomPhotos = [
+  {
+    src: "/media/agp-room1.jpg",
+    alt: "Room 1 — armchairs and a walnut coffee table beneath the pendant light",
+    label: "Room 1",
+    note: "Fourth floor. Armchairs, walnut table, private suite.",
+  },
+  {
+    src: "/media/agp-room1-mirror.jpg",
+    alt: "Room 1 — two armchairs below a gilt-framed mirror",
+    label: "Room 1",
+    note: "Gilt mirror, two chairs. One-to-one and couples.",
+  },
+  {
+    src: "/media/agp-room2.jpg",
+    alt: "Room 2 — the full room, fireplace to one side and sofa to the other",
+    label: "Room 2",
+    note: "Third floor. Fireplace, sofa, the full room.",
+  },
+  {
+    src: "/media/agp-room2-fire.jpg",
+    alt: "Room 2 — armchairs beside the fireplace and gilt arched mirror",
+    label: "Room 2",
+    note: "Armchairs by the fire.",
+  },
+  {
+    src: "/media/agp-room2-sofa.jpg",
+    alt: "Room 2 — the three-seater sofa beneath the window",
+    label: "Room 2",
+    note: "Three-seater under the sash window.",
+  },
+  {
+    src: "/media/agp-room3.jpg",
+    alt: "Room 3 — two armchairs beside the alcove shelving",
+    label: "Room 3",
+    note: "Third floor. Two armchairs, a therapist’s chair.",
+  },
+  {
+    src: "/media/agp-room3-window.jpg",
+    alt: "Room 3 — armchair beneath the porthole and sash windows",
+    label: "Room 3",
+    note: "Porthole light. Built for the hour.",
+  },
+] as const;
+
 export const chapters = [
   {
     num: "01",
