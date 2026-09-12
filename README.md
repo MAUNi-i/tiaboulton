@@ -1,29 +1,9 @@
-# Natasha the Founder
+# Tia Boulton
 
-Personal house of **Natasha Collins**, founder of [ORA Jewellery](https://orajewellery.com/), Cape Town.
+Private practice site for Tia Boulton — registered counsellor, coach and supervisor.
 
-This is the founder app: story, lookbook, charm-stack composer, custom brief, and studio visit. Checkout stays on Shopify at orajewellery.com.
+- Face to face at **AGP, 15 Harley Street, London**
+- Online, worldwide
+- Private hour **£75**, paid on Stripe: https://book.stripe.com/00w5kC1YvdBV9SFfhP53O09
 
-## Live
-
-- Shop: https://orajewellery.com
-- Instagram: [@natasha.thefounder](https://www.instagram.com/natasha.thefounder/) · [@orajewellerysa](https://www.instagram.com/orajewellerysa/)
-- Studio: 604, 125 Buitengracht Street, Cape Town CBD
-- hello@orajewellery.com · +27 76 547 2991
-
-## App
-
-- **Story** — first piece at fifteen, Natasha G, ORA
-- **Lookbook** — collections that open the Shopify store
-- **Stack** — hoop or bangle, gold or silver, up to eight charms (saved on-device)
-- **Custom** — six-step journey and a brief emailed to the studio
-- **Studio** — appointment note
-
-## Stack
-
-React 19, TanStack Start, Tailwind v4, Zustand.
-
-```
-npm install
-npm run dev
-```
+This practice is separate from U-ACT / the PBO. Training affiliation is noted, not billed here.

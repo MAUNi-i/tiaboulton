@@ -4,7 +4,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { SiteShell } from "@/components/site-shell";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Natasha the Founder";
+const APP_NAME = "Tia Boulton";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -15,9 +15,9 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Natasha Collins — founder of ORA Jewellery, Cape Town. Charm stacks, custom heirlooms, handmade to last.",
+          "Tia Boulton — registered counsellor, coach and supervisor. Private sessions in person at AGP, 15 Harley Street, London, and online.",
       },
-      { name: "theme-color", content: "#f7f3ec" },
+      { name: "theme-color", content: "#f3efe8" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },

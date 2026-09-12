@@ -10,84 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as CoachingRouteImport } from './routes/coaching'
-import { Route as CustomRouteImport } from './routes/custom'
-import { Route as ShopRouteImport } from './routes/shop'
-import { Route as StackRouteImport } from './routes/stack'
-import { Route as StudioRouteImport } from './routes/studio'
+import { Route as EnquireRouteImport } from './routes/enquire'
+import { Route as RoomsRouteImport } from './routes/rooms'
+import { Route as SessionsRouteImport } from './routes/sessions'
+import { Route as WorkRouteImport } from './routes/work'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CoachingRoute = CoachingRouteImport.update({
-  id: '/coaching',
-  path: '/coaching',
+const EnquireRoute = EnquireRouteImport.update({
+  id: '/enquire',
+  path: '/enquire',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CustomRoute = CustomRouteImport.update({
-  id: '/custom',
-  path: '/custom',
+const RoomsRoute = RoomsRouteImport.update({
+  id: '/rooms',
+  path: '/rooms',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ShopRoute = ShopRouteImport.update({
-  id: '/shop',
-  path: '/shop',
+const SessionsRoute = SessionsRouteImport.update({
+  id: '/sessions',
+  path: '/sessions',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StackRoute = StackRouteImport.update({
-  id: '/stack',
-  path: '/stack',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StudioRoute = StudioRouteImport.update({
-  id: '/studio',
-  path: '/studio',
+const WorkRoute = WorkRouteImport.update({
+  id: '/work',
+  path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/coaching': typeof CoachingRoute
-  '/custom': typeof CustomRoute
-  '/shop': typeof ShopRoute
-  '/stack': typeof StackRoute
-  '/studio': typeof StudioRoute
+  '/enquire': typeof EnquireRoute
+  '/rooms': typeof RoomsRoute
+  '/sessions': typeof SessionsRoute
+  '/work': typeof WorkRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/coaching': typeof CoachingRoute
-  '/custom': typeof CustomRoute
-  '/shop': typeof ShopRoute
-  '/stack': typeof StackRoute
-  '/studio': typeof StudioRoute
+  '/enquire': typeof EnquireRoute
+  '/rooms': typeof RoomsRoute
+  '/sessions': typeof SessionsRoute
+  '/work': typeof WorkRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/coaching': typeof CoachingRoute
-  '/custom': typeof CustomRoute
-  '/shop': typeof ShopRoute
-  '/stack': typeof StackRoute
-  '/studio': typeof StudioRoute
+  '/enquire': typeof EnquireRoute
+  '/rooms': typeof RoomsRoute
+  '/sessions': typeof SessionsRoute
+  '/work': typeof WorkRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/coaching' | '/custom' | '/shop' | '/stack' | '/studio'
+  fullPaths: '/' | '/enquire' | '/rooms' | '/sessions' | '/work'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/coaching' | '/custom' | '/shop' | '/stack' | '/studio'
-  id:
-    '__root__' | '/' | '/coaching' | '/custom' | '/shop' | '/stack' | '/studio'
+  to: '/' | '/enquire' | '/rooms' | '/sessions' | '/work'
+  id: '__root__' | '/' | '/enquire' | '/rooms' | '/sessions' | '/work'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  CoachingRoute: typeof CoachingRoute
-  CustomRoute: typeof CustomRoute
-  ShopRoute: typeof ShopRoute
-  StackRoute: typeof StackRoute
-  StudioRoute: typeof StudioRoute
+  EnquireRoute: typeof EnquireRoute
+  RoomsRoute: typeof RoomsRoute
+  SessionsRoute: typeof SessionsRoute
+  WorkRoute: typeof WorkRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,39 +88,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/coaching': {
-      id: '/coaching'
-      path: '/coaching'
-      fullPath: '/coaching'
-      preLoaderRoute: typeof CoachingRouteImport
+    '/enquire': {
+      id: '/enquire'
+      path: '/enquire'
+      fullPath: '/enquire'
+      preLoaderRoute: typeof EnquireRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/custom': {
-      id: '/custom'
-      path: '/custom'
-      fullPath: '/custom'
-      preLoaderRoute: typeof CustomRouteImport
+    '/rooms': {
+      id: '/rooms'
+      path: '/rooms'
+      fullPath: '/rooms'
+      preLoaderRoute: typeof RoomsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/shop': {
-      id: '/shop'
-      path: '/shop'
-      fullPath: '/shop'
-      preLoaderRoute: typeof ShopRouteImport
+    '/sessions': {
+      id: '/sessions'
+      path: '/sessions'
+      fullPath: '/sessions'
+      preLoaderRoute: typeof SessionsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/stack': {
-      id: '/stack'
-      path: '/stack'
-      fullPath: '/stack'
-      preLoaderRoute: typeof StackRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/studio': {
-      id: '/studio'
-      path: '/studio'
-      fullPath: '/studio'
-      preLoaderRoute: typeof StudioRouteImport
+    '/work': {
+      id: '/work'
+      path: '/work'
+      fullPath: '/work'
+      preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -139,11 +121,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  CoachingRoute: CoachingRoute,
-  CustomRoute: CustomRoute,
-  ShopRoute: ShopRoute,
-  StackRoute: StackRoute,
-  StudioRoute: StudioRoute,
+  EnquireRoute: EnquireRoute,
+  RoomsRoute: RoomsRoute,
+  SessionsRoute: SessionsRoute,
+  WorkRoute: WorkRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
