@@ -8,7 +8,9 @@ export const Route = createFileRoute("/enquire")({ component: EnquirePage });
 
 function EnquirePage() {
   const [note, setNote] = useState("");
-  const mail = `mailto:${EMAIL}?subject=${encodeURIComponent("Private practice enquiry")}&body=${encodeURIComponent(note)}`;
+  const [kind, setKind] = useState<"hour" | "residential">("hour");
+  const subject = kind === "residential" ? "Residential support — P.O.A" : "Private practice enquiry";
+  const mail = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(note)}`;
 
   return (
     <main className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-2 md:px-8 md:py-16">
@@ -16,8 +18,8 @@ function EnquirePage() {
         <p className="font-sans text-xs uppercase tracking-widest text-metal">Enquire</p>
         <h1 className="mt-3 font-serif text-title">Write, or book the hour.</h1>
         <p className="mt-4 text-muted">
-          If you would like to ask whether this is the right room, send a short note. If you already know, book
-          directly. Tia replies herself.
+          The consulting-room hour is £75 on Stripe. Residential support — twenty-four hours, as part of a
+          multidisciplinary team — is price on application. Tia replies herself.
         </p>
         <p className="mt-8 font-serif text-2xl leading-snug">
           {ROOMS}
@@ -38,6 +40,19 @@ function EnquirePage() {
           window.location.href = mail;
         }}
       >
+        <p className="font-sans text-xs uppercase tracking-widest text-metal">About</p>
+        <div className="flex flex-wrap gap-2">
+          <Button type="button" variant={kind === "hour" ? "solid" : "ghost"} onClick={() => setKind("hour")}>
+            The hour · £75
+          </Button>
+          <Button
+            type="button"
+            variant={kind === "residential" ? "solid" : "ghost"}
+            onClick={() => setKind("residential")}
+          >
+            Residential · P.O.A
+          </Button>
+        </div>
         <label className="font-sans text-xs uppercase tracking-widest text-metal" htmlFor="note">
           A note for Tia
         </label>
@@ -47,11 +62,15 @@ function EnquirePage() {
           onChange={(e) => setNote(e.target.value)}
           rows={7}
           className="w-full border border-line bg-paper px-3 py-3 text-sm text-ink outline-none ring-ring focus:ring-2"
-          placeholder="What you would like from the hour — as little or as much as you wish."
+          placeholder={
+            kind === "residential"
+              ? "The case, the team already involved, and what you need held."
+              : "What you would like from the hour — as little or as much as you wish."
+          }
         />
         <div className="flex flex-wrap gap-3">
           <Button type="submit">Send a note</Button>
-          <SessionCheckoutButton />
+          {kind === "hour" ? <SessionCheckoutButton /> : null}
         </div>
       </form>
     </main>

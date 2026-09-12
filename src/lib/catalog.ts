@@ -68,7 +68,7 @@ export const chapters = [
   {
     num: "03",
     title: "Harley Street and home",
-    body: "Face to face at The Anthony Group Practice, 15 Harley Street. Online, worldwide, for clients who travel or prefer the screen. Same clinician. Same hour.",
+    body: "Face to face at The Anthony Group Practice, 15 Harley Street. Online, worldwide. For complex cases: residential support, twenty-four hours, as part of a multidisciplinary team. Price on application.",
   },
   {
     num: "04",

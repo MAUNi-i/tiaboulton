@@ -55,8 +55,8 @@ function Home() {
         {[
           ["2010", "In practice as a coach"],
           ["£75", "Private hour, Stripe"],
+          ["24h", "Residential support, P.O.A"],
           ["W1G", "AGP, 15 Harley Street"],
-          ["Online", "The same clinician, worldwide"],
         ].map(([k, v]) => (
           <div
             key={k}
