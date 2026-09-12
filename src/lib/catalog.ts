@@ -13,6 +13,25 @@ export const ONLINE_CHECKOUT_URL = "https://book.stripe.com/00w5kC1YvdBV9SFfhP53
 /** Live Stripe — Tia Boulton, Harley Street in person £145 */
 export const HARLEY_CHECKOUT_URL = "https://book.stripe.com/9B64gy6eL0P96Gt2v353O0a";
 
+export const INSURANCE = {
+  scheme: "BACP scheme",
+  broker: "Balens Limited",
+  underwriter: "Zurich Insurance Company Ltd",
+  legalUnderwriter: "ARAG Legal Expenses Insurance Company Limited",
+  activity: "Counselling — fully qualified",
+  policyNumber: "ZUR-BACP/26/03/621",
+  legalPolicyNumber: "TS5/3536365",
+  period: "15 March 2026 — 14 March 2027",
+  effectiveFrom: "8 September 2026",
+  professionalLiability: "£6,000,000 any one claim",
+  publicLiability: "£6,000,000 any one claim",
+  productsLiability: "£6,000,000 in the aggregate",
+  legalLimit: "£100,000",
+  excess: "Nil",
+  claimsTo: "Balens Ltd, Bridge House, Portland Road, Malvern WR14 2TA",
+  claimsHelpline: "01684 893 006",
+} as const;
+
 export const roomPhotos = [
   {
     src: "/media/agp-room1.jpg",
